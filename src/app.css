@@ -1,1 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
+
+@theme {
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-display: 'Montserrat', system-ui, sans-serif;
+
+	--color-background: oklch(97% 0.02 75);
+	--color-foreground: oklch(15% 0.03 75);
+
+	/* Componenti */
+	--color-card: oklch(98% 0.02 75);
+	--color-card-foreground: oklch(15% 0.03 75);
+
+	--color-popover: oklch(98% 0.02 75);
+	--color-popover-foreground: oklch(15% 0.03 75);
+
+	/* Colori semantici */
+	--color-primary: oklch(33% 0.12 75);
+	--color-primary-foreground: oklch(98% 0.02 75);
+
+	--color-secondary: oklch(95% 0.03 75);
+	--color-secondary-foreground: oklch(15% 0.03 75);
+
+	--color-muted: oklch(95% 0.03 75);
+	--color-muted-foreground: oklch(45% 0.03 75);
+
+	--color-accent: oklch(65% 0.15 75);
+	--color-accent-foreground: oklch(15% 0.03 75);
+
+	--color-destructive: oklch(60% 0.25 25);
+	--color-destructive-foreground: oklch(98% 0.02 75);
+}
+
+@layer components {
+	.card {
+	  @apply rounded-2xl p-20;
+	  @apply shadow-lg shadow-muted-foreground;
+	}
+  }
+
+body {
+	@apply bg-background;
+	@apply font-display;
+}
+
+p {
+	@apply font-sans;
+}
