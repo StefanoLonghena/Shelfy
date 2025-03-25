@@ -8,6 +8,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
+		env: {
+      		dir: process.cwd() // Importante per trovare il file .env
+    	},
 		alias: {
 			$components: "./src/lib",
 			$css: "./src/app.css",
