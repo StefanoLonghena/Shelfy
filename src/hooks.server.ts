@@ -62,20 +62,21 @@ const supabase: Handle = async ({ event, resolve }) => {
   })
 }
 
-/* const authGuard: Handle = async ({ event, resolve }) => {
+const authGuard: Handle = async ({ event, resolve }) => {
   const { session, user } = await event.locals.safeGetSession()
   event.locals.session = session
   event.locals.user = user
 
-  if (!event.locals.session && event.url.pathname.startsWith('/private')) {
-    redirect(303, '/auth')
+  if (!event.locals.session && event.route.id?.includes('(protected)')) {
+    redirect(303, '/login')
   }
 
-  if (event.locals.session && event.url.pathname === '/auth') {
-    redirect(303, '/private')
+  //faccio il controllo tranne se sto andando sulla route signout
+  if (event.locals.session && event.route.id?.includes('(auth)') && !event.route.id?.includes('/signout')) {
+    redirect(303, '/dashboard')
   }
 
   return resolve(event)
-} */
+}
 
-export const handle: Handle = sequence(supabase)
+export const handle: Handle = sequence(supabase, authGuard)

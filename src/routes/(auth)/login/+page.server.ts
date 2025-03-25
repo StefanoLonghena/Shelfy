@@ -1,9 +1,8 @@
-import { fail, json } from '@sveltejs/kit';
+import { fail, redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
-import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ locals, url }) => {
+/* export const load: PageServerLoad = async ({ locals, url }) => {
 	// Controlla se esiste già una sessione valida
 	const { session } = await locals.safeGetSession();
 
@@ -14,7 +13,7 @@ export const load: PageServerLoad = async ({ locals, url }) => {
 
 	// Se non è autenticato, mostra normalmente la pagina di login
 	return {};
-};
+}; */
 
 export const actions = {
 	login: async ({ request, locals: { supabase } }) => {
