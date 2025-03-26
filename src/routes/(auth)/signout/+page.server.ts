@@ -2,8 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { Actions } from './$types';
 
 export const actions = {
-	signup: async ({locals: { supabase }, cookies}) => {
-		console.log("works")
+	default: async ({locals: { supabase }, cookies}) => {
 		const { error } = await supabase.auth.signOut()
 
 		if (!error) {

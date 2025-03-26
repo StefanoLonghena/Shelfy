@@ -16,14 +16,6 @@
 	  return () => data.subscription.unsubscribe()
 	})
 </script>
-  
-<!-- constrolla se loggato, da capire se lo fa una sola volta, controllare 
-{#if $page.data.session}
-  
-{:else}
-
-{/if} 
--->
 
 {@render children()}
 
