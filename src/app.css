@@ -41,12 +41,14 @@ p {
 }
 
 /* Default input text styling */
-
-input[type="text"] {
+input {
 	@apply border-secondary;
+}
+
+input[type="text"], input[type="password"] {
 	@apply px-2 py-1
 }
 
-input[type="text"]::placeholder {
+input::placeholder {
 	@apply text-gray-400 text-sm;	
 }

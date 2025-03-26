@@ -12,7 +12,7 @@ const config = {
       		dir: process.cwd() // Importante per trovare il file .env
     	},
 		alias: {
-			$components: "./src/lib",
+			$components: "./src/lib/components",
 			$css: "./src/app.css",
 		},
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
