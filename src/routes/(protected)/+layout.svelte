@@ -3,6 +3,6 @@
 </script>
 
 <Navbar />
-<div class="xl:w-[80%] xl:flex xl:justify-self-center">
+<div class="w-[95%] xl:w-[80%] flex justify-self-center">
 	<slot></slot>
 </div>

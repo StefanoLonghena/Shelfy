@@ -29,15 +29,18 @@
 		</button>
 		<ul role="menu" class="flex">
 			{#each routes as { name, svg, href }}
-				<li role="none">
+				<li role="none" class="mx-2 link-underline link-underline-black {currentRoute ===
+							href
+								? 'link-underline-selected'
+								: null}">
 					<button
 						aria-label={currentRoute === href ? 'page' : undefined}
-						class="mx-2 flex hover:cursor-pointer"
+						class="flex hover:cursor-pointer"
 						onclick={() => handleRouteChange(href)}
 					>
 						<svelte:component this={svg} class="mr-2 size-5" />
 						<span
-							class="hover:underline hover:decoration-2 hover:underline-offset-4 {currentRoute ===
+							class="{currentRoute ===
 							href
 								? 'font-semibold'
 								: null}"
@@ -51,3 +54,28 @@
 		<SignOutButton buttonStyling="border-1 rounded-md p-1 border-gray-500 bg-gray-200"><LogOut /></SignOutButton>
 	</div>
 </nav>
+
+<style>
+	.link-underline {
+		border-bottom-width: 0;
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+		background-size: 0 2px;
+		background-position: 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size .5s ease-in-out;
+	}
+
+	.link-underline-black {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#000000, #000000)
+	}
+
+	.link-underline:hover {
+		background-size: 100% 2px;
+		background-position: 0 100%
+	}
+
+	.link-underline-selected {
+		background-size: 100% 2px;
+		background-position: 0 100%
+	}
+</style>

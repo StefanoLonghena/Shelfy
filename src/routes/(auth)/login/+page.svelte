@@ -17,7 +17,7 @@
 				id="email"
 				value={form?.email}
 				placeholder="your.email@email.com"
-				class="my-2 rounded-md border-2 border-black"
+				class="px-2 py-1 my-2 rounded-md border-2 border-black"
 			/>
 			<label for="pass" class="font-medium">Password</label>
 			<input
@@ -25,7 +25,7 @@
 				name="password"
 				id="pass"
 				placeholder="Your password"
-				class="my-2 rounded-md border-2 border-black"
+				class="px-2 py-1 my-2 rounded-md border-2 border-black"
 			/>
 		</div>
 
