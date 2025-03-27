@@ -1,3 +1,7 @@
+<script lang="ts">
+	let {children, buttonStyling} = $props()
+</script>
+
 <form method="POST" action='/signout'>
-	<button type="submit">Logout</button>
+	<button class={buttonStyling} type="submit">{@render children()}</button>
 </form>
