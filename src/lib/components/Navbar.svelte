@@ -27,9 +27,9 @@
 			<BookOpenText class="text-primary mr-1.5 size-8 content-center" />
 			<h1 class="text-xl font-medium text-black">Shelfy</h1>
 		</button>
-		<ul role="menu" class="flex">
+		<ul role="menu" class="flex space-x-4">
 			{#each routes as { name, svg, href }}
-				<li role="none" class="mx-2 link-underline link-underline-black {currentRoute ===
+				<li role="none" class="link-underline link-underline-black {currentRoute ===
 							href
 								? 'link-underline-selected'
 								: null}">
@@ -51,7 +51,10 @@
 				</li>
 			{/each}
 		</ul>
-		<SignOutButton buttonStyling="border-1 rounded-md p-1 border-gray-500 bg-gray-200"><LogOut /></SignOutButton>
+		<div class="flex">
+			<h1>Name Placeholder</h1>
+			<SignOutButton buttonStyling="border-1 rounded-md p-1 border-gray-500 bg-gray-200"><LogOut /></SignOutButton>
+		</div>
 	</div>
 </nav>
 

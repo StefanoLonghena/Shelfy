@@ -1,6 +1,6 @@
 <script lang="ts">
 	
-	import {default as StatCard} from "$components/Dashboard/Stat Cards/StatCard.svelte"
+	import {default as StatCard} from "$components/Dashboard/StatCards/StatCard.svelte"
 
 	const statCategory = [
 		{name: "Books Read", svg: Book},
@@ -12,7 +12,7 @@
 	import { Book, Bookmark, Calendar, Coffee } from '@lucide/svelte';
 </script>
 
-<section class="flex justify-between xl:mt-20 w-full space-x-2">
+<section class="flex justify-between xl:mt-20 w-full space-x-6">
 	{#each statCategory as {name, svg}}
 		<StatCard {name} Svg={svg} />
 	{/each}

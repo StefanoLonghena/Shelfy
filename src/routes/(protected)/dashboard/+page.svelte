@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { default as WelcomeSection } from '$components/Dashboard/WelcomeSection.svelte';
-	import { default as StatCardsSection } from '$components/Dashboard/Stat Cards/StatCardsSection.svelte';
+	import { default as StatCardsSection } from '$components/Dashboard/StatCards/StatCardsSection.svelte';
+	import {default as CurrentlyReadingSection } from "$components/Dashboard/CurrentlyReading/CurrentlyReadingSection.svelte"
 
 	const libri = [
 		{
@@ -37,5 +38,5 @@
 	
 	<WelcomeSection />
 	<StatCardsSection />
-
+	<CurrentlyReadingSection />
 </div>
