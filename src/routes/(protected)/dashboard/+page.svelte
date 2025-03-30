@@ -5,9 +5,11 @@
 
 	import type { PageProps } from './$types';
 
-	let { data }: PageProps = $props();
+	//saving supabase query results inside data object
+	let { data: result }: PageProps = $props();
 
-	console.log(data.data);
+	//dont know why this 
+	let data = result.data.data
 </script>
 
 <div class="w-full">
