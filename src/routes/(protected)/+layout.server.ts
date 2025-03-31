@@ -6,6 +6,6 @@ import type { LayoutServerLoad } from './$types';
 export const load: LayoutServerLoad = async ({ locals: { supabase } }) => {
 	const { data, error } = await supabase.from('books').select('isbn, pages_read');
 	return {
-		data: data
+		books: data
 	};
 };

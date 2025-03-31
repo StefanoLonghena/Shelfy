@@ -6,15 +6,16 @@
 	import type { PageProps } from './$types';
 
 	//saving supabase query results inside data object
-	let { data: result }: PageProps = $props();
+	let { data }: PageProps = $props();
 
 	//dont know why this 
-	let data = result.data.data
+	console.log(data)
 </script>
 
 <div class="w-full">
 	
 	<WelcomeSection />
 	<StatCardsSection />
-	<CurrentlyReadingSection />
+	<CurrentlyReadingSection {data}/>
+
 </div>
