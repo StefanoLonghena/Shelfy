@@ -8,14 +8,17 @@
 	//saving supabase query results inside data object
 	let { data }: PageProps = $props();
 
-	//dont know why this 
-	console.log(data)
+	let booksRead = data.books.length
+	let pagesRead = 3
+	let activeStreak = 1
+	let hoursRead = 5
+
 </script>
 
 <div class="w-full">
 	
 	<WelcomeSection />
-	<StatCardsSection />
-	<CurrentlyReadingSection {data}/>
+	<StatCardsSection {booksRead}  {pagesRead} {activeStreak} {hoursRead}/>
+	<CurrentlyReadingSection data={data.books}/>
 
 </div>

@@ -6,5 +6,6 @@
 <h1 class="font-sans font-semibold text-2xl text-primary">Currently Reading</h1>
 {#each data as book}
 	<p>{book.isbn}</p>
+	<img src={book.googleCoverImage} alt="">
 {/each}
 </div>
