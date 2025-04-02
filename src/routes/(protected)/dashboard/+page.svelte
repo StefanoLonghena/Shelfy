@@ -9,10 +9,9 @@
 	let { data }: PageProps = $props();
 
 	let booksRead = data.books.length
-	let pagesRead = 3
-	let activeStreak = 1
+	let pagesRead = 0
+	let activeStreak = 0
 	let hoursRead = 5
-
 </script>
 
 <div class="w-full">
